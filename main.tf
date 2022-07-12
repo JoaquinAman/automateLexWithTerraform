@@ -1,5 +1,5 @@
-resource "aws_cloudformation_stack" "network" {
-    name = "networking-stack"
+resource "aws_cloudformation_stack" "network2" {
+    name = "networking-stack2"
     
     parameters = {}
     capabilities = ["CAPABILITY_IAM"]
