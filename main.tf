@@ -1,4 +1,4 @@
-resource "aws_cloudformation_slack" "network" {
+resource "aws_cloudformation_stack" "network" {
   name = "networking-stack"
   
   parameteners = {}
