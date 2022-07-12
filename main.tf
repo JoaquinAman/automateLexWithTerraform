@@ -182,7 +182,7 @@ resource "aws_cloudformation_stack" "network3" {
               }
             },
    
-        },
+       
     
 
         }
