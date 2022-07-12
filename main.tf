@@ -25,8 +25,8 @@
 #     STACK
 #   }
 
-resource "aws_cloudformation_stack" "network2" {
-    name = "networking-stack2"
+resource "aws_cloudformation_stack" "network3" {
+    name = "networking-stack3"
 
     parameters = {}
     capabilities = ["CAPABILITY_IAM"]
