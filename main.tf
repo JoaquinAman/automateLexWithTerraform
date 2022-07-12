@@ -40,7 +40,21 @@ resource "aws_cloudformation_stack" "network3" {
 
    
   {
-      "Parameters": {},
+      "Parameters": {
+          "LB14H9UIntent": {
+              "Type": "AWS::Lex::Intent",
+              "Properties": {
+                "Name": "MegamindFromTerraform",
+                "BotName": "MegamindFromTerraform",
+                "IntentVersions": [
+                  {
+                    "Name": "MegamindFromTerraform",
+                    "Description": "Basic bot created from terraform"
+                  }
+                ]
+              }
+            },
+      },
       "Resources": {
         "LB14H9U": {
           "Type": "AWS::Lex::Bot",
@@ -50,6 +64,11 @@ resource "aws_cloudformation_stack" "network3" {
             "DataPrivacy": {
               "ChildDirected": false
             },
+              
+            "KeyName":{
+                "Ref": "LB14H9UIntent"
+            },
+              
             "IdleSessionTTLInSeconds": 300,
             "Description": "Basic bot created from terraform"
 
@@ -58,19 +77,19 @@ resource "aws_cloudformation_stack" "network3" {
 
 
         },
-        "LB14H9UIntent": {
-          "Type": "AWS::Lex::Intent",
-          "Properties": {
-            "Name": "MegamindFromTerraform",
-            "BotName": "MegamindFromTerraform",
-            "IntentVersions": [
-              {
-                "Name": "MegamindFromTerraform",
-                "Description": "Basic bot created from terraform"
-              }
-            ]
-          }
-        },
+#         "LB14H9UIntent": {
+#           "Type": "AWS::Lex::Intent",
+#           "Properties": {
+#             "Name": "MegamindFromTerraform",
+#             "BotName": "MegamindFromTerraform",
+#             "IntentVersions": [
+#               {
+#                 "Name": "MegamindFromTerraform",
+#                 "Description": "Basic bot created from terraform"
+#               }
+#             ]
+#           }
+#         },
 #         "LB14H9USlotType": {
 #           "Type": "AWS::Lex::SlotType",
 #           "Properties": {
