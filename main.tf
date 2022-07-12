@@ -41,18 +41,18 @@ resource "aws_cloudformation_stack" "network3" {
    
   {
       "Parameters": {
-          "LB14H9UIntent": {
-              "Type": "AWS::Lex::Intent",
-              "Properties": {
-                "Name": "MegamindFromTerraform",
-                "BotName": "MegamindFromTerraform",
-                "IntentVersions": [
-                  {
-                    "Name": "MegamindFromTerraform",
-                    "Description": "Basic bot created from terraform"
-                  }
-                ]
-              }
+#           "LB14H9UIntent": {
+#               "Type": "AWS::Lex::Intent",
+#               "Properties": {
+#                 "Name": "MegamindFromTerraform",
+#                 "BotName": "MegamindFromTerraform",
+#                 "IntentVersions": [
+#                   {
+#                     "Name": "MegamindFromTerraform",
+#                     "Description": "Basic bot created from terraform"
+#                   }
+#                 ]
+#               }
             },
       },
       "Resources": {
@@ -65,9 +65,9 @@ resource "aws_cloudformation_stack" "network3" {
               "ChildDirected": false
             },
               
-            "KeyName":{
-                "Ref": "LB14H9UIntent"
-            },
+#             "KeyName":{
+#                 "Ref": "LB14H9UIntent"
+#             },
               
             "IdleSessionTTLInSeconds": 300,
             "Description": "Basic bot created from terraform"
