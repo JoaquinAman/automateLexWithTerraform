@@ -16,7 +16,7 @@ resource "aws_cloudformation_stack" "network2" {
             "DataPrivacy": {
               "ChildDirected": false
             },
-            "idleSessionTTLInSeconds": 300,
+            "IdleSessionTTLInSeconds": 300,
             "Description": "Basic bot created from terraform"
           }
         }
