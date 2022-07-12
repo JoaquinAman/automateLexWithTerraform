@@ -146,38 +146,42 @@ resource "aws_cloudformation_stack" "network3" {
             }
           },
 
-         intents: {
-           "Intent1": {
-             "IntentName": "Intent1",
-             "SampleUtterances": [
-               "Hello",
-               "Hi"
-             ]
-           }
-         },
-         utterances: {
-           "Utterance1": {
-             "UtteranceName": "Utterance1",
-             "UtteranceText": "Hello",
-             "Slots": [
-               {
-                 "Name": "Slot1",
-                 "SlotType": "SlotType1"
-               }
-             ]
-           }
-         },
-         slottypes: {
-           "SlotType1": {
-             "Name": "SlotType1",
-             "Description": "SlotType1",
-             "EnumerationValues": [
-               {
-                 "Value": "Value1"
-               }
-             ]
-           }
-         }
+        "LB14H9UIntent": {
+              "Type": "AWS::Lex::Intent",
+              "Properties": {
+                "Name": "MegamindFromTerraform",
+                "IntentVersion": "$LATEST",
+                "Checksum": "",
+                "CreateVersion": true,
+                "Description": "Basic bot created from terraform",
+                "LastUpdatedDate": "2018-01-01T00:00:00Z",
+                "Name": "MegamindFromTerraform",
+                "ParentIntentSignature": "",
+                "SampleUtterances": [
+                  "",
+                  ""
+                ],
+                "Slots": {
+                  "": {
+                    "Description": "",
+                    "SlotConstraint": "Required",
+                    "SlotType": "AMAZON.LITERAL",
+                    "SlotTypeVersion": "$LATEST",
+                    "ValueElicitationPrompt": {
+                      "MaxAttempts": 1,
+                      "Messages": [
+                        {
+                          "Content": "",
+                          "ContentType": "PlainText"
+                        }
+                      ],
+                      "ResponseCard": ""
+                    }
+                  }
+                }
+              }
+            },
+   
         },
     
 
