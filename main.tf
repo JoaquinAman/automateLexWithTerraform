@@ -7,7 +7,7 @@ resource "aws_cloudformation_stack" "network" {
     template_body = <<STACK
   {
       "Parameters": {},
-      "Resources": [
+      "Resources": {
         "LB14H9U": {
           "Type": "AWS::Lex::Bot",
           "Properties": {
@@ -20,7 +20,7 @@ resource "aws_cloudformation_stack" "network" {
             "Description": "Basic bot created from terraform"
           }
         }
-     ]
+      }
     }
     STACK
   }
