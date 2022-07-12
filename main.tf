@@ -1,7 +1,7 @@
 resource "aws_cloudformation_stack" "network" {
   name = "networking-stack"
   
-  parameteners = {}
+  parameters = {}
   capabilities = ["CAPABILITY_IAM"]
   
   template_body = <<STACK
