@@ -71,27 +71,27 @@ resource "aws_cloudformation_stack" "network3" {
             ]
           }
         },
-        "LB14H9USlotType": {
-          "Type": "AWS::Lex::SlotType",
-          "Properties": {
-            "Name": "MegamindFromTerraform",
-            "Description": "Basic bot created from terraform",
-            "EnumerationValues": [
-              {
-                "Value": "Megamind",
-                "Synonyms": [
-                  "Megamind"
-                ]
-              },
-              {
-                "Value": "Megamind2",
-                "Synonyms": [
-                  "Megamind2"
-                ]
-              }
-            ]
-          }
-        },
+#         "LB14H9USlotType": {
+#           "Type": "AWS::Lex::SlotType",
+#           "Properties": {
+#             "Name": "MegamindFromTerraform",
+#             "Description": "Basic bot created from terraform",
+#             "EnumerationValues": [
+#               {
+#                 "Value": "Megamind",
+#                 "Synonyms": [
+#                   "Megamind"
+#                 ]
+#               },
+#               {
+#                 "Value": "Megamind2",
+#                 "Synonyms": [
+#                   "Megamind2"
+#                 ]
+#               }
+#             ]
+#           }
+#         },
 
 
       }
